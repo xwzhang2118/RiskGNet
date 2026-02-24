@@ -27,7 +27,7 @@ def ndcg_at_k(pred_genes, true_genes, k):
     idcg = 0
     for idx, gene in enumerate(pred_genes[:k]):
         if gene in true_genes:
-            dcg += 1 / np.log2(idx + 2)  # idx+2 修正 DCG
+            dcg += 1 / np.log2(idx + 2)  
     for idx in range(min(len(true_genes), k)):
         idcg += 1 / np.log2(idx + 2)
     return dcg / idcg if idcg > 0 else 0
