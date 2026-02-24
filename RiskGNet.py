@@ -373,20 +373,20 @@ if __name__ == '__main__':
             # np.save(f'{args.dataset}/beta_values_{fold}.npy', beta_reshaped)
             # np.savetxt(f'{args.dataset}/emd_values.txt', emdd_cpu, fmt='%d')
     
-    # 计算平均AUC、AUPR和F1
+    # AUC、AUPR and F1
     average_auc = np.mean(all_fold_auc)
     average_aupr = np.mean(all_fold_aupr)
     average_f1 = np.mean(all_fold_f1)
     average_acc = np.mean(all_fold_acc)
 
-    # 计算平均标准差
+    # compute std
     std_auc = np.std(all_fold_auc)
     std_aupr = np.std(all_fold_aupr)
     std_f1 = np.std(all_fold_f1)
     std_acc = np.std(all_fold_acc)
 
 
-    # 保留后四位小数
+    # save result
     average_auc = round(average_auc, 3)
     average_aupr = round(average_aupr, 3)
     average_f1 = round(average_f1, 3)
@@ -397,13 +397,13 @@ if __name__ == '__main__':
     std_f1 = round(std_f1, 3)
     std_acc = round(std_acc, 3)
 
-    # 打印结果
+    # print result
     print(f"\n10-Fold Cross-Validation Average AUC: {average_auc} ± {std_auc}")
     print(f"10-Fold Cross-Validation Average AUPR: {average_aupr} ± {std_aupr}")
     print(f"10-Fold Cross-Validation Average F1: {average_f1} ± {std_f1}")
     print(f"10-Fold Cross-Validation Average ACC: {average_acc} ± {std_acc}")
     
-    # 释放显存
+    # clear memory
     del dual_graph_transformer
     del link_predictor
     torch.cuda.empty_cache()
