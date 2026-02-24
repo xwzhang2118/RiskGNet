@@ -17,6 +17,19 @@ RiskGNet is a graph neural network framework for predicting associations between
   - `test_edge_index.txt` / `test_edge_name.txt`: Index and name files for test edges.
 - `Result/`: Output directory for prediction files. Example files: `prediction_0_STAD.txt` ... `prediction_4_STAD.txt` (one per CV fold/run).
 
+## Method (Overview)
+The following summarizes the main idea of RiskGNet and points to a schematic (Figure 1) illustrating the framework.
+
+To address limitations in current studies, we propose RiskGNet, a multi-channel graph convolutional network (McGCN) framework for gene prioritization at GWAS variants. Specifically, RiskGNet is designed with three key points:
+
+- (i) It explicitly models the synergistic effects of multiple loci rather than considering the impact of each SNP in isolation.
+- (ii) It systematically integrates diverse types of genetic relationships by constructing an SNP–gene heterogeneous network and a prior sequence-similarity network, thereby capturing regulatory mechanisms at different levels.
+- (iii) It introduces a McGCN to capture key genetic information from the SNP–gene heterogeneous network and the sequence-similarity prior network. The shared channel employs parameter sharing and a contrastive loss to achieve cross-network feature alignment. Meanwhile, the personalized channel incorporates a multi-level attention mechanism to capture key genetic information. Based on the above techniques, RiskGNet empowers the discovery of complex genetic relationships.
+
+Figure 1 (method schematic) is available below. The repository already contains a PNG version at `Result/fig1.png`, which will display on GitHub and most viewers.
+
+![Figure 1 — RiskGNet schematic](Result/fig1.png)
+
 ## 3. Requirements & dependencies
 Recommended Python: 3.8+.
 
