@@ -26,8 +26,6 @@ To address limitations in current studies, we propose RiskGNet, a multi-channel 
 - (ii) It systematically integrates diverse types of genetic relationships by constructing an SNP–gene heterogeneous network and a prior sequence-similarity network, thereby capturing regulatory mechanisms at different levels.
 - (iii) It introduces a McGCN to capture key genetic information from the SNP–gene heterogeneous network and the sequence-similarity prior network. The shared channel employs parameter sharing and a contrastive loss to achieve cross-network feature alignment. Meanwhile, the personalized channel incorporates a multi-level attention mechanism to capture key genetic information. Based on the above techniques, RiskGNet empowers the discovery of complex genetic relationships.
 
-Figure 1 (method schematic) is available below. The repository already contains a PNG version at `Result/fig1.png`, which will display on GitHub and most viewers.
-
 ![Figure 1 — RiskGNet schematic](Result/fig1.png)
 
 ## 3. Requirements & dependencies
