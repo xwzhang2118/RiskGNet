@@ -1,6 +1,5 @@
 # RiskGNet
-
-English README for the RiskGNet project. This file documents project purpose, structure, dependencies, usage, data formats, evaluation, and troubleshooting tips.
+This file documents project purpose, structure, dependencies, usage, data formats, evaluation, and troubleshooting tips.
 
 ## 1. Project overview
 RiskGNet is a graph neural network framework for predicting associations between single nucleotide polymorphisms (SNPs) and genes. It builds and trains a dual-graph model that leverages a real interaction graph and a feature-based (sequence/similarity) graph, and uses contrastive learning together with link prediction. The implementation uses PyTorch and PyTorch Geometric (PyG).
