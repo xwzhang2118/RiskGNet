@@ -78,10 +78,5 @@ python Evaluation.py
 - File path or parsing issues: `RiskGNet.py` constructs dataset paths relative to its file location. Ensure `STAD/` exists and files use expected delimiters/encodings.
 - Shape/type mismatch errors: verify `node_feature.txt` and `feature_str.txt` have the expected shapes and that SNP/gene indexing matches assumptions in `RiskGNet.py`.
 
-## 8. Suggested improvements
-- Add a `requirements.txt` or `environment.yml` for reproducible installs.
-- Provide a Dockerfile or Conda environment for easier reproduction across machines.
-- Add a small synthetic dataset and a `--debug` or `--quick` flag for fast local testing.
-
-## 9. License & contact
+## 8. License & contact
 No license file is included in this repository. Please confirm licensing with the project owner before reuse or redistribution.
